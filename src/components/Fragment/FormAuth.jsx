@@ -1,5 +1,5 @@
 import Button from "../Element/Button";
-import InputForm from "../Element/inputForm";
+import InputForm from "../Element/inputForm.jsx";
 import { Link } from "react-router-dom";
 
 const FormAuth = (props) => {
