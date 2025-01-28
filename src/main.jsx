@@ -15,7 +15,6 @@ import BorrowedPage from "./pages/BorrowedPage.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
 import EventPage from "./pages/EventPage.jsx";
 import ProfilePage from "./pages/ProfilPage.jsx";
-import QRCodeGenerator from "./pages/qrcode.jsx";
 
 const queryClient = new QueryClient();
 
