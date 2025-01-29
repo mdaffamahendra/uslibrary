@@ -47,7 +47,7 @@ const SignUpPage = () => {
                 icon: "success",
                 draggable: true
               });
-            navigate("/sign-in");
+            navigate("/");
             
         } else {
             setFailed(result.message);

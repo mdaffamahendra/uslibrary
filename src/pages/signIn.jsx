@@ -20,7 +20,7 @@ const SignInPage = () => {
         
         if (password.status) {
             localStorage.setItem("userLoginEmail", JSON.stringify(data.email));
-            window.location.href = '/library';
+            window.location.href = '/';
         } else {
             setFailed(password.message);
         }
