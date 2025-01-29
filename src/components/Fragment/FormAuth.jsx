@@ -14,7 +14,7 @@ const FormAuth = (props) => {
           <p className="text-center text-sm text-red-600 mt-2">{failed}</p>
         )}
         {type === "Sign Up" && (
-        <InputForm type={"text"} name={"username"} max={"8"}>
+        <InputForm type={"text"} name={"username"} max={"18"}>
           Username
         </InputForm>
         )}
