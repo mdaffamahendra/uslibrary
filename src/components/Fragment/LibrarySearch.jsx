@@ -71,12 +71,12 @@ const LibrarySearch = () => {
         </div>
       </header>
 
-      {loading && <span className="loading loading-bars loading-lg text-blue-500 mx-auto"></span>} {/* Tampilkan loading jika sedang loading */}
+      {loading && <span className="loading loading-bars loading-lg text-blue-500 mx-auto mb-12"></span>} {/* Tampilkan loading jika sedang loading */}
       {error && <p style={{ color: "red" }}>{error}</p>} {/* Tampilkan error jika ada */}
       <div className="flex flex-wrap gap-2">
         {books.length === 0 ? (
           <div className="w-full text-center p-4 text-gray-600">
-            <p>Silahkan Cari Buku Anda</p> {/* Pesan jika tidak ada hasil */}
+            <p>Loading...</p> {/* Pesan jika tidak ada hasil */}
           </div>
         ) : (
           books.map((book) => (

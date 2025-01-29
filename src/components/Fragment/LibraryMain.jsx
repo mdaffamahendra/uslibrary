@@ -124,7 +124,7 @@ const LibraryMain = () => {
 
   const handleSearch = () => {
     if (query.trim()) {
-      navigate(`/library/search?q=${encodeURIComponent(query)}`);
+      navigate(`/search?q=${encodeURIComponent(query)}`);
     }
   };
 
@@ -148,7 +148,6 @@ const LibraryMain = () => {
   return (
     <div className="flex-1 p-6 w-full h-screen overflow-y-auto">
       <div className="mb-4 flex flex-col lg:flex-row justify-between items-center w-full mb-24">
-        {/* Header */}
         <header className="text-blue-500 py-4 px-6 w-full lg:w-auto">
           <h1 className="text-3xl font-bold text-center lg:text-left text-blue-500">
             UsLibrary
@@ -158,7 +157,6 @@ const LibraryMain = () => {
           </p>
         </header>
 
-        {/* Search Bar */}
         <div className="flex items-center w-full lg:w-auto rounded-lg p-2">
           <input
             type="text"
