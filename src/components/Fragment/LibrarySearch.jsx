@@ -43,7 +43,7 @@ const LibrarySearch = () => {
   // Ketika tombol search ditekan
   const handleSearch = () => {
     if (query.trim()) {
-      navigate(`/library/search?q=${encodeURIComponent(query)}`); // Ubah URL
+      navigate(`/search?q=${encodeURIComponent(query)}`); // Ubah URL
       setSearchQuery(query); // Tetapkan query ke searchQuery untuk fetch data
     }
   };

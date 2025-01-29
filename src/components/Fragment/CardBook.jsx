@@ -84,7 +84,7 @@ const FooterCard = ({ book }) => {
       alert("Maaf, anda harus masuk terlebih dahulu");
       navigate("/sign-in");
     } else {
-      navigate(`/library/detail-book/${book.id}`);
+      navigate(`/detail-book/${book.id}`);
     }
   };
 

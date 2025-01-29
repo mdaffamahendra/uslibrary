@@ -21,7 +21,7 @@ const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ErrorPage />,
+    element: <LibraryPage />,
   },
   {
     path: "/sign-up",
@@ -32,31 +32,27 @@ const router = createBrowserRouter([
     element: <SignInPage />,
   },
   {
-    path: "/library",
-    element: <LibraryPage />,
-  },
-  {
-    path: "/library/search",
+    path: "/search",
     element: <LibrarySearchPage />,
   },
   {
-    path: "/library/detail-book/:bookId",
+    path: "/detail-book/:bookId",
     element: <DetailPage />,
   },
   {
-    path: "/library/peminjaman",
+    path: "/peminjaman",
     element: <BorrowedPage />
   },
   {
-    path: "/library/event",
+    path: "/event",
     element: <EventPage />
   },
   {
-    path: "/library/service",
+    path: "/service",
     element: <ServicePage />
   },
   {
-    path: "/library/profil",
+    path: "/profile",
     element: <ProfilePage />
   },
 ]);

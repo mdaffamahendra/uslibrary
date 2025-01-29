@@ -56,7 +56,7 @@ const FooterCard = ({ book, type = "" }) => {
     };
 
     const handleDetail = () => {
-        navigate(`/library/detail-book/${book.id}`);
+        navigate(`/detail-book/${book.id}`);
     };
 
     useEffect(() => {

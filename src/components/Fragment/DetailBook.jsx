@@ -30,7 +30,7 @@ const DetailBook = () => {
   };
 
   const handleNavigation = () => {
-    navigate("/library/peminjaman");
+    navigate("/peminjaman");
   };
 
   useEffect(() => {
