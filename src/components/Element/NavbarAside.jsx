@@ -15,7 +15,7 @@ const NavbarAside = () => {
         <Link to="/event" className="block px-4 py-2 rounded hover:bg-slate-700">
           Event
         </Link>
-        <Link to="/profil" className="block px-4 py-2 rounded hover:bg-slate-700">
+        <Link to="/profile" className="block px-4 py-2 rounded hover:bg-slate-700">
           My Profile
         </Link>
       </nav>

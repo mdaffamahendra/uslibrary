@@ -148,7 +148,8 @@ const LibraryMain = () => {
   return (
     <div className="flex-1 p-6 w-full h-screen overflow-y-auto">
       <div className="mb-4 flex flex-col lg:flex-row justify-between items-center w-full mb-24">
-        <header className="text-blue-500 py-4 px-6">
+        {/* Header */}
+        <header className="text-blue-500 py-4 px-6 w-full lg:w-auto">
           <h1 className="text-3xl font-bold text-center lg:text-left text-blue-500">
             UsLibrary
           </h1>
@@ -156,16 +157,18 @@ const LibraryMain = () => {
             Temukan buku favorit Anda!
           </p>
         </header>
-        <div className="flex items-center">
+
+        {/* Search Bar */}
+        <div className="flex items-center w-full lg:w-auto rounded-lg p-2">
           <input
             type="text"
             onChange={handleInputChange}
             placeholder="Enter book title"
-            className="p-2 border border-gray-300 rounded mr-2"
+            className="p-2 border border-gray-300 rounded mr-2 flex-grow w-full lg:w-auto"
           />
           <Button
             onClick={handleSearch}
-            className={"bg-blue-500 text-white px-4 py-2 rounded"}
+            className="bg-blue-500 text-white px-4 py-2 rounded whitespace-nowrap"
           >
             Search
           </Button>

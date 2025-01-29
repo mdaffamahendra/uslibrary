@@ -66,9 +66,9 @@ const Profile = () => {
             {/* Tampilan profil ketika sudah login */}
             <div className="flex items-center space-x-4 mb-8 p-8 bg-blue-600 rounded-lg shadow-md">
               <div>
-                <h2 className="text-3xl font-semibold text-white">{pustakawan.username}</h2>
-                <p className="text-lg text-gray-600 text-white">{pustakawan.email}</p>
-                <p className="text-lg text-gray-600 text-white">ID Anggota: {pustakawan.idPustakawan}</p>
+                <h2 className="lg:text-3xl text-xl font-semibold text-white">{pustakawan.username}</h2>
+                <p className="lg:text-lg text-md text-gray-600 text-white">{pustakawan.email}</p>
+                <p className="lg:text-lg text-md text-gray-600 text-white">ID Anggota: {pustakawan.idPustakawan}</p>
               </div>
             </div>
 

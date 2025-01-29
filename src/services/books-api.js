@@ -19,9 +19,7 @@ const fetchDetailBook = async (id) => {
 const fetchCategoryData = async (category) => {
   try {
     const response = await fetch(
-      `https://books-google-api.vercel.app/books?category=${encodeURIComponent(
-        category
-      )}&maxResults=21&startIndex=0`
+      `https://books-google-api.vercel.app/books?category=${encodeURIComponent(category)}&maxResults=21&startIndex=0`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch data");

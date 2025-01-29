@@ -6,7 +6,7 @@ const FormAuth = (props) => {
   const { failed, handle, type } = props;
   return (
     <div className="md:w-1/2 w-full flex flex-col justify-center p-8">
-      <h2 className="text-xl md:text-3xl font-semibold text-center text-gray-800 mb-6">
+      <h2 className="text-xl md:text-3xl font-semibold text-center mb-6 text-indigo-600">
         {type}
       </h2>
       <form className="space-y-4" onSubmit={handle}>
