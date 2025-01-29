@@ -1,11 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
 import useLogin from "../../hooks/useLogin";
 import { joinEvents } from "../../redux/slice/PustakawanSlice";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+const MySwal = withReactContent(Swal);
 
 const CardEvent = ({ event, children, className = "" }) => {
   return (
     <div className={`bg-white rounded-lg shadow-lg overflow-hidden`}>
-      <div className="p-6 flex flex-col justify-between items-start">{children}</div>
+      <div className="p-6 flex flex-col justify-between items-start">
+        {children}
+      </div>
     </div>
   );
 };
@@ -43,33 +48,47 @@ const FooterCard = ({ event, type = "" }) => {
   const eventCheck = pustakawanEvent.find((e) => e.id === event.id);
 
   const handleSign = () => {
-    if(pustakawanLogin) {
+    if (pustakawanLogin) {
       if (eventCheck) {
-        alert("Anda tidak bisa mendaftar");
+        MySwal.fire({
+          title: "Silahkan Masuk Terlebih Dahulu",
+          text: "Untuk mendaftar event perpustakaan harap masuk terlebih dahulu",
+          icon: "error",
+          confirmButtonText: "OK",
+        });
       } else {
         dispatch(joinEvents({ idPustakawan, event }));
-        alert("Berhasil daftar");
+        MySwal.fire({
+          title: "Daftar Berhasil",
+          text: "Selamat anda berhasil mendaftar pada event ini",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
       }
     } else {
-      alert("Maaf, untuk mendaftar event, anda harus masuk terlebih dahulu");
+      MySwal.fire({
+        title: "Silahkan Masuk Terlebih Dahulu",
+        text: "Untuk mendaftar event perpustakaan harap masuk terlebih dahulu",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
     }
-    
   };
 
   return type === "profile" ? (
-        <div></div>
-    ) : (
+    <div></div>
+  ) : (
     <div className="py-4">
-        <button
-          type="button"
-          className={`bg-green-500 text-white text-xs md:text-md px-3 py-1 rounded hover:bg-green-600 ${
-            eventCheck ? "disabled:bg-gray-400 disabled:cursor-not-allowed" : ""
-          }`}
-          disabled={eventCheck}
-          onClick={handleSign}
-        >
-          Daftar
-        </button>
+      <button
+        type="button"
+        className={`bg-green-500 text-white text-xs md:text-md px-3 py-1 rounded hover:bg-green-600 ${
+          eventCheck ? "disabled:bg-gray-400 disabled:cursor-not-allowed" : ""
+        }`}
+        disabled={eventCheck}
+        onClick={handleSign}
+      >
+        Daftar
+      </button>
     </div>
   );
 };

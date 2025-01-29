@@ -46,10 +46,11 @@ const Category = React.memo(({ category }) => {
     if (container) {
       setIsAtStart(container.scrollLeft === 0);
       setIsAtEnd(
-        container.scrollLeft + container.offsetWidth >= container.scrollWidth
+        container.scrollLeft + container.clientWidth >= container.scrollWidth - 1
       );
     }
   };
+  
 
   const scrollLeft = () => {
     scrollContainer.current.scrollBy({ left: -200, behavior: "smooth" });
