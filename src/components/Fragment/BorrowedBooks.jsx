@@ -24,7 +24,7 @@ const BorrowedBooks = () => {
     )?.borrowedBooks || [];
 
   useEffect(() => {
-    if(books.length > 0) {
+    if(books.length >= 0) {
       setBookFilter(books);
     }
   }, [books]);

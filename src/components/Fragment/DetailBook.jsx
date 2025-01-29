@@ -53,7 +53,7 @@ const DetailBook = () => {
       if (message === "Buku berhasil dipinjam") {
         MySwal.fire({
           title: "Buku Berhasil Dipinjam!",
-          text: "Untuk pengambilan buku, pastikan Anda sudah melakukan peminjaman melalui sistem. Setelah itu, datanglah ke loket pengambilan buku di perpustakaan dengan membawa bukti peminjaman, seperti kartu anggota, kode peminjaman, atau bukti digital lainnya. Petugas akan memverifikasi data Anda. Setelah verifikasi selesai, buku yang Anda pinjam akan diserahkan.",
+          text: "Silakan ambil buku di loket dengan membawa bukti peminjaman.",
           icon: "success",
           confirmButtonText: "OK",
         }).then(() => {

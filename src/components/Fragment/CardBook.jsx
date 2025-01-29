@@ -117,12 +117,12 @@ const FooterCard = ({ book }) => {
       <div className="flex justify-center items-center mt-3 gap-2">
         <button
           type="button"
-          className="bg-blue-500 text-white text-xs px-3 py-1 rounded hover:bg-blue-600"
+          className="bg-blue-500 text-white text-xs px-3 py-2 rounded hover:bg-blue-600 w-full"
           onClick={handleDetail}
         >
           Detail
         </button>
-        <button
+        {/* <button
           type="button"
           className={`bg-green-500 text-white text-xs px-3 py-1 rounded hover:bg-green-600 ${
             isBorrowed ? "disabled:bg-gray-400 disabled:cursor-not-allowed" : ""
@@ -131,7 +131,7 @@ const FooterCard = ({ book }) => {
           disabled={isBorrowed}
         >
           {isBorrowed && pustakawanLogin ? "Sudah Dipinjam" : "Pinjam"}
-        </button>
+        </button> */}
       </div>
     </div>
   );
