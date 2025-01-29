@@ -24,8 +24,9 @@ const BorrowedBooks = () => {
     )?.borrowedBooks || [];
 
   useEffect(() => {
-    // Inisialisasi filter buku saat pertama kali komponen dimuat
-    setBookFilter(books);
+    if(books.length > 0) {
+      setBookFilter(books);
+    }
   }, [books]);
 
   useEffect(() => {
