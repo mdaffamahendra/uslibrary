@@ -21,8 +21,7 @@ const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LibraryPage />,
-    errorElement: <ErrorPage />,
+    element: <ErrorPage />,
   },
   {
     path: "/sign-up",
