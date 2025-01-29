@@ -3,7 +3,7 @@ import InputForm from "../Element/InputForm";
 import { Link } from "react-router-dom";
 
 const FormAuth = (props) => {
-  const { failed, handle, type } = props;
+  const { failed, handle, type, max } = props;
   return (
     <div className="md:w-1/2 w-full flex flex-col justify-center p-8">
       <h2 className="text-xl md:text-3xl font-semibold text-center mb-6 text-indigo-600">
@@ -14,14 +14,14 @@ const FormAuth = (props) => {
           <p className="text-center text-sm text-red-600 mt-2">{failed}</p>
         )}
         {type === "Sign Up" && (
-        <InputForm type={"text"} name={"username"}>
+        <InputForm type={"text"} name={"username"} max={"8"}>
           Username
         </InputForm>
         )}
         <InputForm type={"email"} name={"email"}>
           Email
         </InputForm>
-        <InputForm type={"password"} name={"password"}>
+        <InputForm type={"password"} name={"password"} max={max} min={"8"}>
           Password
         </InputForm>
         <Button type={"submit"}>{type}</Button>

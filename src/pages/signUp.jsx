@@ -56,7 +56,7 @@ const SignUpPage = () => {
     return (
         <AuthLayout>
             <ImageAuth />
-            <FormAuth failed={failed} handle={handleSignUp} type={"Sign Up"}/>
+            <FormAuth failed={failed} handle={handleSignUp} type={"Sign Up"} max={"8"}/>
         </AuthLayout>
     );
 };

@@ -28,7 +28,7 @@ const SignInPage = () => {
     return (
         <AuthLayout>
             <ImageAuth />
-            <FormAuth failed={failed} handle={handleSignIn} type={"Sign In"}/>
+            <FormAuth failed={failed} handle={handleSignIn} type={"Sign In"} max={"98"}/>
         </AuthLayout>
     );
 };
